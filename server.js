@@ -11,7 +11,7 @@ app.use(function (req,res,next){
   next();
 })
 
-app.use('/',require('./index')(io))
+app.use('/',require('./socket')(io))
 
 http.listen(3000, function(){
     console.log('listening on *:3000');
