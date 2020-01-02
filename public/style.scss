@@ -1,7 +1,9 @@
+$width:97vw;
+$height:95vh;
 #login{
     background-image: url('22120.jpg');
-    height:93.4vh;
-    width: 96vw;
+    height:$height;
+    width: $width;
     margin:10px;
     padding: 10px;
     text-align: center;
@@ -34,6 +36,51 @@
         &:active{
             box-shadow: 1px 1px 1px 1px, 1px 1px 1px 1px whitesmoke;
         }
+    }
+}
+#content{
+    background-image: url('1478026.jpg');
+    width: $width;
+    height: $height;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+    #msg{
+        background-color: whitesmoke;
+        opacity: 0.6;
+        display: inline-block;
+        .flex-msg{
+            padding:0.3vw ;
+        }
+        .messageBox{
+            min-width: $width*0.5;
+            #allMessage{
+                min-width: $width*0.44;
+                min-height: $height*0.87;
+                border: 10px double crimson;
+                background-color: rgb(72, 45, 230);
+            }
+            input[type=text]{
+                width: 90%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;      
+            }
+            #msg_btn{
+                background-color: Transparent;
+                background-repeat:no-repeat;
+                border: none;
+                cursor:pointer;
+                overflow: hidden;
+                outline:none;
+            }
+        }
+        
     }
 }
 .user_btn{

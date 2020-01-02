@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id='login'>
+    <div id='login' style="display:none">
         <h2 class='head'>LOGIN</h2><br>
         <div id='login_box'>
           <span style='font-size: x-large;color:beige'>username : </span> 
@@ -13,24 +14,31 @@
           <button id="login_btn">login</button>      
         </div>
     </div>
-     <h3 id="user_name"></h3>
-    <div id='msg' style="display:none">
-        <h2>messaging</h2><br>
-          massage:<input type="text" placeholder="enter message here..." id="send_msg">
-          <button id="msg_btn">send message</button>      
-    </div>
-      
-    <ul id="user_list" ></ul>
-      
-    <div id="div_recieve" style="display:none">
-        messages recieved:
-        <ul id="recieved_msg"></ul>
-    </div>
-     
-      
-    <div id="div_sent" style="display:none">
-        messages you sent:
-        <ul id="sent_msg"></ul>
+    <div id='content'>
+        <h3 id="user_name"></h3>
+        <div id='msg'>
+          <div class='flex-msg messageBox'>
+            <div id='allMessage'>
+              
+            </div>
+            <div>
+              <input type="text" placeholder="enter message here..." id="send_msg">
+              <button id="msg_btn"><i class="fa fa-telegram" style="font-size:3vw;color:blue"></i></button>      
+            </div>
+          </div>
+        </div>
+          
+        <ul id="user_list" ></ul>
+          
+        <div id="div_recieve" style="display:none">
+            messages recieved:
+            <ul id="recieved_msg"></ul>
+        </div>
+          
+        <div id="div_sent" style="display:none">
+            messages you sent:
+            <ul id="sent_msg"></ul>
+        </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
