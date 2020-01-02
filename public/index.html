@@ -2,36 +2,16 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
-  <style>
-    
-    .user_btn{
-      background-color: chartreuse;
-      color:chocolate;
-      border:none;
-      padding-left:20px;
-      padding-right: 20px;
-      padding-top: 7px;
-      padding-bottom: 7px;
-      font-family: 'Courier New', Courier, monospace;
-      border-radius:12px;
-    }
-
-
-    .selected{
-      background-color: aqua;
-      color:darkblue;
-      font-size: 20px;
-      border-radius: 20px
-    }  
-    
-
-  </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id='login'>
-        <h2>login</h2><br>
-        username:<input type="text" placeholder="enter name here..." id="login_nm">
-        <button id="login_btn">login</button>      
+        <h2 class='head'>LOGIN</h2><br>
+        <div id='login_box'>
+          <span style='font-size: x-large;color:beige'>username : </span> 
+          <input type="text" placeholder="enter name here..." id="login_nm">
+          <button id="login_btn">login</button>      
+        </div>
     </div>
      <h3 id="user_name"></h3>
     <div id='msg' style="display:none">

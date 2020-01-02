@@ -25,6 +25,7 @@ let my_username
     login_btn.click(function(e){
         e.preventDefault(); // prevents page reloading
         const user=login_nm.val()  
+        console.log('sad')
         socket.emit('login', {user:user}); 
    })    
 
@@ -66,6 +67,10 @@ let my_username
        //console.log(user_val)
        console.log(selected_user)
        clicked_user=user_val.innerText
+       console.log(user_val.id)
+       if(user_val.id==='user_list'){
+        return ;
+       }
         console.log('clicked_user',clicked_user)
         const user_exists_index=selected_user.findIndex((element,index)=>element.user===clicked_user)
         
@@ -93,8 +98,8 @@ let my_username
             id:user_val.id
            }
         selected_user.push(value)
-   user_val.classList.add('selected')
-   }
+        user_val.classList.add('selected')
+        }
    })
    
    //sending message
